@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --color-ink: #111111;
+  --color-ink-2: #1a1a1a;
+  --color-gold: #c9973f;
+  --color-gold-dark: #a97f34;
+  --color-cream: #f7f3ec;
+  --color-cream-2: #efe8db;
+  --color-stone: #6b6660;
+}
+
+@theme inline {
+  --color-ink: var(--color-ink);
+  --color-ink-2: var(--color-ink-2);
+  --color-gold: var(--color-gold);
+  --color-gold-dark: var(--color-gold-dark);
+  --color-cream: var(--color-cream);
+  --color-cream-2: var(--color-cream-2);
+  --color-stone: var(--color-stone);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+}
