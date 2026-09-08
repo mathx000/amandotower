@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { navLinks, services } from "@/lib/data";
 import { IconChevronDown, IconMenu, IconClose } from "./icons";
@@ -10,6 +10,17 @@ export default function Header() {
   const pathname = usePathname();
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
@@ -44,7 +55,7 @@ export default function Header() {
                 onMouseLeave={() => setServicesOpen(false)}
               >
                 <button
-                  className={`flex items-center gap-1 py-2 transition-colors ${
+                  className={`flex items-center gap-1 py-2 transition-colors cursor-pointer ${
                     isActive(link.href)
                       ? "text-gold"
                       : "text-white hover:text-gold"
@@ -101,7 +112,7 @@ export default function Header() {
         </div>
 
         <button
-          className="lg:hidden text-white"
+          className="lg:hidden text-white cursor-pointer"
           onClick={() => setMobileOpen((v) => !v)}
           aria-label="Abrir menu"
         >
@@ -110,7 +121,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="lg:hidden bg-ink-2 border-t border-white/10 px-6 py-4">
+        <div className="lg:hidden absolute inset-x-0 top-20 h-[calc(100vh-5rem)] bg-ink-2 border-t border-white/10 px-6 py-4 overflow-y-auto">
           <nav className="flex flex-col gap-1 text-sm">
             {navLinks.map((link) => (
               <Link

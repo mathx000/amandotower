@@ -36,6 +36,16 @@ export default function PinturaPage() {
         images.pinturaSide1,
         images.pinturaSide2,
       ]}
+      materials={[
+        "Tinta Acrílica Premium",
+        "Tinta Látex Fosca",
+        "Tinta Epóxi para Exteriores",
+        "Primário Selador",
+        "Massa Acrílica",
+        "Rolos de Microfibra",
+        "Fita Crepe Profissional",
+      ]}
+      gallery={images.pinturaGallery}
       advantages={[
         {
           icon: <IconStar />,

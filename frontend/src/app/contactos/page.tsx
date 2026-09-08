@@ -280,7 +280,7 @@ export default function ContactosPage() {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors disabled:opacity-60"
+                  className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
                 >
                   {loading ? "A ENVIAR..." : "ENVIAR PEDIDO DE ORÇAMENTO"}{" "}
                   <IconArrowRight />

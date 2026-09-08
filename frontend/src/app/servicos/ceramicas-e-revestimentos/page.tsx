@@ -55,6 +55,14 @@ export default function CeramicasPage() {
           text: "Cores, texturas e padrões para todos os gostos e projetos.",
         },
       ]}
+      materials={[
+        "Cerâmica Retificada",
+        "Porcelanato Grês",
+        "Mármore Travertino",
+        "Argamassa Colante Flexível",
+        "Rejunte Epóxi",
+        "Espaçadores Niveladores",
+      ]}
       gallery={images.ceramicasGallery}
       cta={{
         title: "Vamos encontrar os revestimentos ideais para o seu projeto?",

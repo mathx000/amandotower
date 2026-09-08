@@ -58,6 +58,15 @@ export default function CarpintariaPage() {
           text: "Planeamento eficiente e equipa experiente para entregas no prazo acordado.",
         },
       ]}
+      materials={[
+        "Madeira de Carvalho Maciço",
+        "Contraplacado Marítimo",
+        "Verniz Poliuretano",
+        "Dobradiças de Aço Inox",
+        "Martelo de Aço",
+        "Serra Circular",
+        "Lixadeira Orbital",
+      ]}
       gallery={images.carpintariaGallery}
       cta={{
         title: "Tem um projeto em mente?",

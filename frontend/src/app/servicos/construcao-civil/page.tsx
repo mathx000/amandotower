@@ -1,7 +1,10 @@
-import Image from "next/image";
 import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
+import {
+  ConstrucaoMainPhoto,
+  ConstrucaoObraGallery,
+} from "@/components/ConstrucaoGallery";
 import { images } from "@/lib/images";
 import {
   IconArrowRight,
@@ -137,12 +140,9 @@ export default function ConstrucaoCivilPage() {
             </div>
           </div>
           <div className="relative h-72 lg:h-105">
-            <Image
-              src={images.construcaoMain}
-              alt=""
-              fill
-              className="object-cover"
-              sizes="(min-width: 1024px) 40vw, 90vw"
+            <ConstrucaoMainPhoto
+              main={images.construcaoMain}
+              obra={images.construcaoObra}
             />
             <div className="absolute bottom-4 left-4 right-4 bg-ink/90 text-white text-xs p-4">
               Do projeto à entrega, acompanhamos todo o processo da sua obra.
@@ -175,12 +175,44 @@ export default function ConstrucaoCivilPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10">
             {otherServices.map((s) => (
-              <div key={s} className="bg-ink p-6 flex items-center gap-3">
+              <div
+                key={s}
+                className="bg-ink p-6 flex items-center gap-3 min-w-0"
+              >
                 <span className="text-gold shrink-0">
                   <IconHome className="w-5 h-5" />
                 </span>
-                <span className="text-sm">{s}</span>
+                <span className="text-sm wrap-break-word min-w-0">{s}</span>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <p className="eyebrow text-xs text-gold-dark tracking-[0.2em] mb-3 text-center">
+            MATERIAIS E FERRAMENTAS
+          </p>
+          <h2 className="font-serif text-2xl sm:text-3xl mb-8 text-center">
+            O que utilizamos neste serviço
+          </h2>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              "Cimento Portland",
+              "Betão Armado",
+              "Blocos de Betão",
+              "Aço para Armaduras",
+              "Tijolo Cerâmico",
+              "Argamassa de Reboco",
+              "Betoneira",
+            ].map((m) => (
+              <span
+                key={m}
+                className="border border-gold-dark/40 text-gold-dark text-xs tracking-wide px-4 py-2"
+              >
+                {m}
+              </span>
             ))}
           </div>
         </div>
@@ -273,17 +305,10 @@ export default function ConstrucaoCivilPage() {
             </Link>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            {images.construcaoObra.map((src, i) => (
-              <div key={i} className="relative h-36 sm:h-44">
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  className="object-cover"
-                  sizes="25vw"
-                />
-              </div>
-            ))}
+            <ConstrucaoObraGallery
+              main={images.construcaoMain}
+              obra={images.construcaoObra}
+            />
           </div>
         </div>
       </section>

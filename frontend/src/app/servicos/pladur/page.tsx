@@ -31,6 +31,15 @@ export default function PladurPage() {
         "Soluções personalizadas para cada espaço",
       ]}
       sectionImage={[images.pladurMain, images.pladurSide1, images.pladurSide2]}
+      materials={[
+        "Placas de Gesso Cartonado",
+        "Perfis de Aço Galvanizado",
+        "Lã Mineral Isolante",
+        "Massa para Juntas",
+        "Fita de Juntas",
+        "Parafusos Autoperfurantes",
+      ]}
+      gallery={images.pladurGallery}
       advantages={[
         {
           icon: <IconRuler />,

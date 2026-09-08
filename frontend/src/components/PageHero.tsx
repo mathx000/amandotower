@@ -27,10 +27,10 @@ export default function PageHero({
           alt=""
           fill
           priority
-          className="object-cover opacity-45"
+          className="object-cover opacity-70"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-ink via-ink/80 to-ink/30" />
+        <div className="absolute inset-0 bg-linear-to-r from-ink/80 via-ink/55 to-ink/15" />
       </div>
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-14 pb-20 lg:pt-16 lg:pb-28">
         <div className="flex items-center gap-2 text-xs tracking-wide text-white/60 mb-6">

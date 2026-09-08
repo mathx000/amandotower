@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import type { ReactNode } from "react";
 import PageHero from "./PageHero";
 import CtaBanner from "./CtaBanner";
+import Lightbox from "./Lightbox";
 import { IconCheckCircle, IconArrowRight } from "./icons";
 import Link from "next/link";
 
@@ -20,6 +23,7 @@ type ServiceTemplateProps = {
   features: string[];
   sectionImage: [string, string, string];
   advantages: Advantage[];
+  materials?: string[];
   gallery?: string[];
   cta?: Cta;
 };
@@ -35,9 +39,12 @@ export default function ServiceTemplate({
   features,
   sectionImage,
   advantages,
+  materials,
   gallery,
   cta,
 }: ServiceTemplateProps) {
+  const allImages = [...sectionImage, ...(gallery ?? [])];
+
   return (
     <>
       <PageHero
@@ -77,33 +84,51 @@ export default function ServiceTemplate({
             </ul>
           </div>
           <div className="grid grid-cols-2 gap-4">
-            <div className="relative col-span-2 h-56 sm:h-64">
-              <Image
-                src={sectionImage[0]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 40vw, 90vw"
-              />
-            </div>
-            <div className="relative h-40 sm:h-48">
-              <Image
-                src={sectionImage[1]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 20vw, 45vw"
-              />
-            </div>
-            <div className="relative h-40 sm:h-48">
-              <Image
-                src={sectionImage[2]}
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(min-width: 1024px) 20vw, 45vw"
-              />
-            </div>
+            <Lightbox images={allImages}>
+              {(open) => (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => open(0)}
+                    className="group relative col-span-2 h-56 sm:h-64 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  >
+                    <Image
+                      src={sectionImage[0]}
+                      alt=""
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 40vw, 90vw"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => open(1)}
+                    className="group relative h-40 sm:h-48 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  >
+                    <Image
+                      src={sectionImage[1]}
+                      alt=""
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 20vw, 45vw"
+                    />
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => open(2)}
+                    className="group relative h-40 sm:h-48 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                  >
+                    <Image
+                      src={sectionImage[2]}
+                      alt=""
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      sizes="(min-width: 1024px) 20vw, 45vw"
+                    />
+                  </button>
+                </>
+              )}
+            </Lightbox>
           </div>
         </div>
       </section>
@@ -124,6 +149,29 @@ export default function ServiceTemplate({
         </div>
       </section>
 
+      {materials && (
+        <section className="pb-20">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <p className="eyebrow text-xs text-gold-dark tracking-[0.2em] mb-3 text-center">
+              MATERIAIS E FERRAMENTAS
+            </p>
+            <h2 className="font-serif text-2xl sm:text-3xl mb-8 text-center">
+              O que utilizamos neste serviço
+            </h2>
+            <div className="flex flex-wrap justify-center gap-3">
+              {materials.map((m) => (
+                <span
+                  key={m}
+                  className="border border-gold-dark/40 text-gold-dark text-xs tracking-wide px-4 py-2"
+                >
+                  {m}
+                </span>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {gallery && (
         <section className="pb-20">
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -131,17 +179,26 @@ export default function ServiceTemplate({
               INSPIRAÇÃO PARA O SEU PROJETO
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-6">
-              {gallery.map((src, i) => (
-                <div key={i} className="relative h-32 sm:h-40">
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    className="object-cover"
-                    sizes="20vw"
-                  />
-                </div>
-              ))}
+              <Lightbox images={allImages}>
+                {(open) =>
+                  gallery.map((src, i) => (
+                    <button
+                      type="button"
+                      key={i}
+                      onClick={() => open(sectionImage.length + i)}
+                      className="group relative h-32 sm:h-40 overflow-hidden hover:shadow-xl transition-shadow cursor-pointer"
+                    >
+                      <Image
+                        src={src}
+                        alt=""
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="20vw"
+                      />
+                    </button>
+                  ))
+                }
+              </Lightbox>
             </div>
           </div>
         </section>

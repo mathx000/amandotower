@@ -2,12 +2,13 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import PageHero from "@/components/PageHero";
 import CtaBanner from "@/components/CtaBanner";
 import { images } from "@/lib/images";
 import { fetchProjects } from "@/lib/api";
+import { projectsDetail, slugify } from "@/lib/projects";
 import type { Project } from "@/lib/types";
-import { IconArrowRight } from "@/components/icons";
 
 const categories = [
   "Todos os Projetos",
@@ -28,7 +29,7 @@ const stats = [
 
 export default function ProjetosPage() {
   const [active, setActive] = useState("Todos os Projetos");
-  const [projects, setProjects] = useState<Project[]>(images.projetos);
+  const [projects, setProjects] = useState<Project[]>(projectsDetail);
 
   useEffect(() => {
     fetchProjects().then((data) => {
@@ -77,7 +78,7 @@ export default function ProjetosPage() {
               <button
                 key={c}
                 onClick={() => setActive(c)}
-                className={`text-xs tracking-wide px-4 py-2.5 border transition-colors ${
+                className={`text-xs tracking-wide px-4 py-2.5 border transition-colors cursor-pointer ${
                   active === c
                     ? "bg-gold border-gold text-ink"
                     : "border-black/10 text-stone hover:border-gold hover:text-gold-dark"
@@ -90,9 +91,10 @@ export default function ProjetosPage() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {filtered.map((p) => (
-              <div
+              <Link
                 key={p.title}
-                className="group bg-white border border-black/5 overflow-hidden"
+                href={`/projetos/${slugify(p.title)}`}
+                className="group bg-white border border-black/5 overflow-hidden block"
               >
                 <div className="relative h-44">
                   <Image
@@ -110,7 +112,7 @@ export default function ProjetosPage() {
                   <h3 className="text-sm mb-1">{p.title}</h3>
                   <p className="text-xs text-stone">{p.year}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
