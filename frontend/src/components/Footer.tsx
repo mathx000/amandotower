@@ -1,5 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { services } from "@/lib/data";
+import logo from "@/img/logo/logo2.png";
 import {
   IconFacebook,
   IconInstagram,
@@ -14,14 +16,11 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-14 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <span className="flex items-center gap-3 mb-4">
-            <svg
-              viewBox="0 0 24 24"
-              className="w-8 h-8 text-gold"
-              fill="currentColor"
-            >
-              <path d="M12 2L22 20H2L12 2z" />
-              <path d="M12 8L17.5 18h-11L12 8z" fill="#111111" />
-            </svg>
+            <Image
+              src={logo}
+              alt="Amando Tower"
+              className="w-14 h-14 object-contain"
+            />
             <span className="font-serif text-white text-base">
               AMANDO TOWER REMODELAÇÕES
             </span>

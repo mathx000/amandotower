@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { navLinks, services } from "@/lib/data";
 import { IconChevronDown, IconMenu, IconClose } from "./icons";
+import logo from "@/img/logo/logo2.png";
 
 export default function Header() {
   const pathname = usePathname();
@@ -29,18 +31,18 @@ export default function Header() {
     <header className="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3">
-          <span className="text-gold" aria-hidden="true">
-            <svg viewBox="0 0 24 24" className="w-9 h-9" fill="currentColor">
-              <path d="M12 2L22 20H2L12 2z" />
-              <path d="M12 8L17.5 18h-11L12 8z" fill="#111111" />
-            </svg>
-          </span>
+          <Image
+            src={logo}
+            alt="Amando Tower"
+            className="w-16 h-16 object-contain"
+            priority
+          />
           <span className="leading-tight">
             <span className="block font-serif text-lg tracking-wide text-white">
               AMANDO TOWER
             </span>
             <span className="block text-[10px] tracking-[0.3em] text-gold -mt-1">
-              REMODELAÇÕES
+              CONSTRUÇÃO
             </span>
           </span>
         </Link>
