@@ -77,6 +77,12 @@ export default function Header() {
                         </Link>
                       ))}
                       <Link
+                        href="/construcao-civil"
+                        className="block px-5 py-2.5 text-sm text-gold border-t border-white/10 mt-1"
+                      >
+                        Área Construção Civil
+                      </Link>
+                      <Link
                         href="/servicos"
                         className="block px-5 py-2.5 text-sm text-gold border-t border-white/10 mt-1 pt-2.5"
                       >
@@ -145,6 +151,13 @@ export default function Header() {
                 </Link>
               ))}
             </div>
+            <Link
+              href="/construcao-civil"
+              onClick={() => setMobileOpen(false)}
+              className="py-2 pl-3 text-gold text-xs tracking-wide"
+            >
+              — Área Construção Civil
+            </Link>
             <Link
               href="/contactos"
               onClick={() => setMobileOpen(false)}

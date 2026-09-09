@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import CtaBanner from "@/components/CtaBanner";
+import HeroSlider from "@/components/HeroSlider";
 import { images } from "@/lib/images";
 import { newsArticles } from "@/lib/news";
 import {
@@ -13,6 +14,8 @@ import {
   IconLayers,
   IconHammer,
   IconTile,
+  IconHome,
+  IconCheckCircle,
 } from "@/components/icons";
 
 const differentiators = [
@@ -67,6 +70,13 @@ const specialties = [
     href: "/servicos/ceramicas-e-revestimentos",
     img: images.homeCeramicas,
   },
+  {
+    icon: <IconHome />,
+    title: "Construção Civil",
+    text: "Obras de raiz, ampliações e reabilitação com rigor técnico.",
+    href: "/servicos/construcao-civil",
+    img: images.construcaoHero,
+  },
 ];
 
 const materials = [
@@ -115,6 +125,13 @@ const materials = [
   },
 ];
 
+const construcaoCivilHighlights = [
+  "Fundações e estruturas",
+  "Alvenaria e rebocos",
+  "Ampliações e construção de raiz",
+  "Reabilitação estrutural",
+];
+
 const testimonials = [
   {
     name: "Marta Oliveira",
@@ -139,46 +156,7 @@ const testimonials = [
 export default function HomePage() {
   return (
     <>
-      <section className="relative bg-ink text-white overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src={images.homeHero}
-            alt=""
-            fill
-            priority
-            className="object-cover opacity-75"
-            sizes="100vw"
-          />
-          <div className="absolute inset-0 bg-linear-to-r from-ink/80 via-ink/55 to-ink/15" />
-        </div>
-        <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-24 lg:pt-24 lg:pb-32">
-          <p className="eyebrow text-xs text-gold tracking-[0.25em] mb-5">
-            REMODELAMOS. CONSTRUÍMOS. TRANSFORMAMOS.
-          </p>
-          <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl max-w-xl leading-tight">
-            Remodelações com detalhe.{" "}
-            <span className="text-gold">Obra com elegância.</span>
-          </h1>
-          <p className="max-w-lg text-white/70 text-base sm:text-lg mt-6 leading-relaxed">
-            Especialistas em remodelações de interiores e construção civil, com
-            foco em acabamentos de excelência.
-          </p>
-          <div className="flex flex-wrap gap-4 mt-9">
-            <Link
-              href="/projetos"
-              className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors"
-            >
-              VER PROJETOS <IconArrowRight />
-            </Link>
-            <Link
-              href="/contactos"
-              className="inline-flex items-center gap-2 border border-white/40 text-white text-sm tracking-wide px-6 py-3.5 hover:border-gold hover:text-gold transition-colors"
-            >
-              PEDIR ORÇAMENTO
-            </Link>
-          </div>
-        </div>
-      </section>
+      <HeroSlider />
 
       <section className="bg-ink border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -210,7 +188,7 @@ export default function HomePage() {
             <span className="block w-14 h-0.5 bg-gold mx-auto" />
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {specialties.map((s) => (
               <Link
                 key={s.href}
@@ -289,6 +267,52 @@ export default function HomePage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-ink text-white">
+        <div className="max-w-7xl mx-auto px-6 lg:px-10 grid lg:grid-cols-2 gap-12 items-center">
+          <div className="relative h-72 lg:h-104 order-2 lg:order-1">
+            <Image
+              src={images.construcaoMain}
+              alt="Construção Civil"
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
+          </div>
+          <div className="order-1 lg:order-2">
+            <p className="eyebrow text-xs text-gold tracking-[0.2em] mb-3">
+              CONSTRUÇÃO CIVIL
+            </p>
+            <h2 className="font-serif text-3xl sm:text-4xl mb-4">
+              Obras com solidez, do projeto à entrega
+            </h2>
+            <p className="text-white/70 leading-relaxed mb-6">
+              Executamos obras de raiz, ampliações e reabilitações estruturais
+              com rigor técnico, cumprindo prazos e assegurando total segurança
+              em cada fase da construção.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {construcaoCivilHighlights.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-center gap-3 text-sm text-white/85"
+                >
+                  <span className="text-gold shrink-0">
+                    <IconCheckCircle />
+                  </span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/servicos/construcao-civil"
+              className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors"
+            >
+              VER CONSTRUÇÃO CIVIL <IconArrowRight />
+            </Link>
           </div>
         </div>
       </section>

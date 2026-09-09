@@ -69,7 +69,7 @@ export const images = {
     img(20771873, 500, 400),
   ],
 
-  construcaoHero: img(39011061, 1600, 1100),
+  construcaoHero: img(34891691, 1600, 1100),
   construcaoMain: img(37627540, 900, 900),
   construcaoObra: [
     img(38210392, 500, 400),

@@ -138,6 +138,12 @@ export default function ConstrucaoCivilPage() {
                 <p className="text-sm">Soluções personalizadas</p>
               </div>
             </div>
+            <Link
+              href="/construcao-civil"
+              className="mt-8 inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors"
+            >
+              VER SOLUÇÕES <IconArrowRight />
+            </Link>
           </div>
           <div className="relative h-72 lg:h-105">
             <ConstrucaoMainPhoto
@@ -151,7 +157,7 @@ export default function ConstrucaoCivilPage() {
         </div>
       </section>
 
-      <section className="bg-ink text-white py-20">
+      <section className="bg-ink text-white py-20" id="outros-servicos">
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
           <div className="max-w-2xl mb-12">
             <p className="eyebrow text-xs text-gold tracking-[0.2em] mb-3">
