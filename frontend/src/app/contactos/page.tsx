@@ -148,7 +148,7 @@ export default function ContactosPage() {
               rel="noopener noreferrer"
               className="mt-8 flex items-center gap-3 bg-ink text-white px-5 py-4 hover:bg-ink-2 transition-colors"
             >
-              <IconWhatsapp className="text-gold" />
+              <IconWhatsapp className="w-5 h-5 text-gold" />
               <span className="text-sm">Envie-nos uma mensagem</span>
             </a>
           </div>
