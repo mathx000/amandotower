@@ -7,7 +7,7 @@ import {
   IconCalendar,
 } from "@/components/icons";
 
-export const metadata = { title: "Pintura | Amando Tower Remodelações" };
+export const metadata = { title: "Pintura | Amado Tower Remodelações" };
 
 export default function PinturaPage() {
   return (

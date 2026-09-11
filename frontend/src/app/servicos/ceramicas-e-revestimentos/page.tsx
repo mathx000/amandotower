@@ -3,7 +3,7 @@ import { images } from "@/lib/images";
 import { IconTile, IconShield, IconLayers, IconStar } from "@/components/icons";
 
 export const metadata = {
-  title: "Cerâmicas e Revestimentos | Amando Tower Remodelações",
+  title: "Cerâmicas e Revestimentos | Amado Tower Remodelações",
 };
 
 export default function CeramicasPage() {

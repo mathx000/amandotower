@@ -9,7 +9,7 @@ import {
   IconStar,
 } from "@/components/icons";
 
-export const metadata = { title: "Sobre Nós | Amando Tower Remodelações" };
+export const metadata = { title: "Sobre Nós | Amado Tower Remodelações" };
 
 const values = [
   {
@@ -55,7 +55,7 @@ export default function SobreNosPage() {
             </h2>
             <span className="block w-14 h-0.5 bg-gold mb-6" />
             <p className="text-stone leading-relaxed">
-              A Amando Tower Remodelações nasceu da paixão por transformar
+              A Amado Tower Remodelações nasceu da paixão por transformar
               espaços em ambientes únicos. Ao longo dos anos, construímos uma
               reputação assente na qualidade dos acabamentos, no rigor da
               execução e na proximidade com cada cliente, entregando projetos

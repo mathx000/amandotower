@@ -21,7 +21,7 @@ export default function ConstructionAbout() {
         <div className="relative h-72 lg:h-104 order-2 lg:order-1">
           <Image
             src={images.construcaoMain}
-            alt="Obra de construção civil da Amando Tower"
+            alt="Obra de construção civil da Amado Tower"
             fill
             className="object-cover"
             sizes="(min-width: 1024px) 50vw, 100vw"
@@ -36,7 +36,7 @@ export default function ConstructionAbout() {
           </h2>
           <span className="block w-14 h-0.5 bg-gold mb-6" />
           <p className="text-white/70 leading-relaxed mb-10">
-            A Amando Tower executa os trabalhos que dão corpo a qualquer
+            A Amado Tower executa os trabalhos que dão corpo a qualquer
             projeto: escavação, terraplanagem, fundações e estruturas em betão
             armado, com máquinas próprias e materiais de obra como cimento,
             brita, areia, tijolo e ferro.
@@ -54,7 +54,7 @@ export default function ConstructionAbout() {
             ))}
           </div>
           <p className="text-[11px] text-white/40 mt-6 italic">
-            * Valores a confirmar com a equipa Amando Tower.
+            * Valores a confirmar com a equipa Amado Tower.
           </p>
         </div>
       </div>

@@ -18,11 +18,11 @@ export default function Footer() {
           <span className="flex items-center gap-3 mb-4">
             <Image
               src={logo}
-              alt="Amando Tower"
+              alt="Amado Tower"
               className="w-14 h-14 object-contain"
             />
             <span className="font-serif text-white text-base">
-              AMANDO TOWER REMODELAÇÕES
+              AMADO TOWER REMODELAÇÕES
             </span>
           </span>
           <p className="text-sm leading-relaxed">
@@ -150,7 +150,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex flex-col sm:flex-row justify-between gap-2 text-xs text-white/50">
-          <p>© 2026 Amando Tower Remodelações. Todos os direitos reservados.</p>
+          <p>© 2026 Amado Tower Remodelações. Todos os direitos reservados.</p>
           <p>
             Desenvolvido com <span className="text-gold">♥</span> em Portugal
           </p>

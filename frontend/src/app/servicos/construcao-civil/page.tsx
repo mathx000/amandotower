@@ -20,7 +20,7 @@ import {
 } from "@/components/icons";
 
 export const metadata = {
-  title: "Construção Civil | Amando Tower Remodelações",
+  title: "Construção Civil | Amado Tower Remodelações",
 };
 
 const otherServices = [

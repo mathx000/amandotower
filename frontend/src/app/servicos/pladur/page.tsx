@@ -7,7 +7,7 @@ import {
   IconStar,
 } from "@/components/icons";
 
-export const metadata = { title: "Pladur | Amando Tower Remodelações" };
+export const metadata = { title: "Pladur | Amado Tower Remodelações" };
 
 export default function PladurPage() {
   return (

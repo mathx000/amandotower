@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const article = getNewsBySlug(slug);
   return {
-    title: article ? `${article.title} | Amando Tower Remodelações` : "Notícia",
+    title: article ? `${article.title} | Amado Tower Remodelações` : "Notícia",
   };
 }
 
@@ -63,7 +63,7 @@ export default async function NewsDetailPage({
               </span>
               {article.category === "Setor"
                 ? "Notícia do Setor"
-                : "Amando Tower"}
+                : "Amado Tower"}
             </span>
           </div>
 

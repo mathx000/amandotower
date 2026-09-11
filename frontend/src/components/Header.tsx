@@ -33,13 +33,13 @@ export default function Header() {
         <Link href="/" className="flex items-center gap-3">
           <Image
             src={logo}
-            alt="Amando Tower"
+            alt="Amado Tower"
             className="w-16 h-16 object-contain"
             priority
           />
           <span className="leading-tight">
             <span className="block font-serif text-lg tracking-wide text-white">
-              AMANDO TOWER
+              AMADO TOWER
             </span>
             <span className="block text-[10px] tracking-[0.3em] text-gold -mt-1">
               CONSTRUÇÃO

@@ -24,7 +24,7 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   return {
-    title: project ? `${project.title} | Amando Tower Remodelações` : "Projeto",
+    title: project ? `${project.title} | Amado Tower Remodelações` : "Projeto",
   };
 }
 

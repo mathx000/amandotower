@@ -143,7 +143,7 @@ const testimonials = [
     name: "Ricardo Fonseca",
     location: "Lisboa",
     rating: 5,
-    text: "Contratámos a Amando Tower para a pintura e pladur de todo o apartamento. Trabalho rigoroso, limpo e com atenção a cada detalhe. Recomendo sem hesitar.",
+    text: "Contratámos a Amado Tower para a pintura e pladur de todo o apartamento. Trabalho rigoroso, limpo e com atenção a cada detalhe. Recomendo sem hesitar.",
   },
   {
     name: "Inês Carvalho",
@@ -365,7 +365,7 @@ export default function HomePage() {
               NOTÍCIAS E NOVIDADES
             </p>
             <h2 className="font-serif text-3xl sm:text-4xl mb-4">
-              O que se passa na Amando Tower
+              O que se passa na Amado Tower
             </h2>
             <span className="block w-14 h-0.5 bg-gold mx-auto" />
           </div>

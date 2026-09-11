@@ -14,7 +14,7 @@ import {
 } from "@/components/icons";
 
 export const metadata = {
-  title: "Serviços | Amando Tower Remodelações",
+  title: "Serviços | Amado Tower Remodelações",
 };
 
 const servicesList = [

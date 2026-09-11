@@ -18,7 +18,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Amando Tower Remodelações | Remodelações e Construção Civil",
+  title: "Amado Tower Remodelações | Remodelações e Construção Civil",
   description:
     "Especialistas em remodelações de interiores e construção civil, com foco em acabamentos de excelência. Peça o seu orçamento sem compromisso.",
 };

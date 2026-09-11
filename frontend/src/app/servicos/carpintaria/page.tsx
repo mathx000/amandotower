@@ -7,7 +7,7 @@ import {
   IconCalendar,
 } from "@/components/icons";
 
-export const metadata = { title: "Carpintaria | Amando Tower Remodelações" };
+export const metadata = { title: "Carpintaria | Amado Tower Remodelações" };
 
 export default function CarpintariaPage() {
   return (

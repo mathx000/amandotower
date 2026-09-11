@@ -49,7 +49,7 @@ export default function ConstructionBenefits() {
             DIFERENCIAIS
           </p>
           <h2 className="font-sans font-extrabold text-3xl sm:text-4xl mb-4 tracking-tight">
-            Por que escolher a Amando Tower?
+            Por que escolher a Amado Tower?
           </h2>
           <span className="block w-14 h-0.5 bg-gold mx-auto" />
         </div>

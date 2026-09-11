@@ -13,13 +13,13 @@ import ConstructionFAQ from "@/components/construction/ConstructionFAQ";
 import ConstructionContact from "@/components/construction/ConstructionContact";
 
 export const metadata: Metadata = {
-  title: "Construção Civil | Amando Tower",
+  title: "Construção Civil | Amado Tower",
   description:
-    "Construção civil, reabilitação, remodelação e soluções para obras. Conheça os serviços, materiais e projetos da Amando Tower.",
+    "Construção civil, reabilitação, remodelação e soluções para obras. Conheça os serviços, materiais e projetos da Amado Tower.",
   openGraph: {
-    title: "Construção Civil | Amando Tower",
+    title: "Construção Civil | Amado Tower",
     description:
-      "Construção civil, reabilitação, remodelação e soluções para obras. Conheça os serviços, materiais e projetos da Amando Tower.",
+      "Construção civil, reabilitação, remodelação e soluções para obras. Conheça os serviços, materiais e projetos da Amado Tower.",
     url: "/construcao-civil",
   },
 };

@@ -26,7 +26,7 @@ export default function ConstructionHero() {
 
       <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-16 pb-20 lg:pt-24 lg:pb-28">
         <p className="eyebrow text-xs text-gold tracking-[0.3em] mb-6">
-          AMANDO TOWER · CONSTRUÇÃO CIVIL
+          AMADO TOWER · CONSTRUÇÃO CIVIL
         </p>
         <h1 className="font-sans font-extrabold text-4xl sm:text-5xl lg:text-6xl max-w-2xl leading-[1.05] tracking-tight">
           Trabalho pesado. Fundações sólidas.
