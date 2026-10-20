@@ -14,7 +14,7 @@ export default function PinturaPage() {
     <ServiceTemplate
       breadcrumbs={[
         { label: "Início", href: "/" },
-        { label: "Serviços", href: "/servicos" },
+        { label: "Serviços" },
         { label: "Pintura" },
       ]}
       title="Pintura"

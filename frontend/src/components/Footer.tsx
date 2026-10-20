@@ -65,22 +65,6 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href="/projetos"
-                className="hover:text-gold transition-colors"
-              >
-                Projetos
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/servicos/construcao-civil"
-                className="hover:text-gold transition-colors"
-              >
-                Processo de Trabalho
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/contactos"
                 className="hover:text-gold transition-colors"
               >

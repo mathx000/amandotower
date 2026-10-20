@@ -43,12 +43,6 @@ export default function ConstructionHero() {
           >
             SOLICITAR ORÇAMENTO
           </Link>
-          <Link
-            href="#projetos"
-            className="inline-flex items-center gap-2 border border-white/30 text-white text-sm tracking-wide px-6 py-3.5 hover:border-gold hover:text-gold transition-colors"
-          >
-            VER PROJETOS
-          </Link>
         </div>
 
         <div className="flex flex-wrap items-center gap-x-5 gap-y-2 mt-10 text-xs tracking-[0.15em] text-white/50">

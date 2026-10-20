@@ -1,10 +1,3 @@
-export type Project = {
-  title: string;
-  cat: string;
-  year: string;
-  img: string;
-};
-
 export type ContactPayload = {
   name: string;
   email: string;

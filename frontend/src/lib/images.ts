@@ -9,7 +9,6 @@ export const images = {
   homeCarpintaria: img(6790066, 700, 600),
   homeCeramicas: img(7045352, 700, 600),
 
-  servicosHero: img(31737859, 1600, 1100),
   servicoPintura: img(6474135, 700, 600),
   servicoPladur: img(11427405, 700, 600),
   servicoCarpintaria: img(37162555, 700, 600),
@@ -76,18 +75,6 @@ export const images = {
     img(14546924, 500, 400),
     img(29404039, 500, 400),
     img(7108784, 500, 400),
-  ],
-
-  projetosHero: img(31737859, 1600, 1100),
-  projetos: [
-    { title: "Apartamento T3 – Lisboa", cat: "Remodelação Total", year: "2024", img: img(7546323, 700, 560) },
-    { title: "Moradia S. João – Cascais", cat: "Cozinha", year: "2024", img: img(36777559, 700, 560) },
-    { title: "Apartamento Páteo – Porto", cat: "Casa de Banho", year: "2024", img: img(12119354, 700, 560) },
-    { title: "Moradia Belas Clube – Sintra", cat: "Exteriores", year: "2024", img: img(7031604, 700, 560) },
-    { title: "Moradia Ílhavo – Aveiro", cat: "Interiores", year: "2024", img: img(27164969, 700, 560) },
-    { title: "Apartamento Duplex – Oeiras", cat: "Remodelação Total", year: "2023", img: img(8082551, 700, 560) },
-    { title: "Clínica Privada – Lisboa", cat: "Espaços Comerciais", year: "2023", img: img(33827309, 700, 560) },
-    { title: "Moradia Ericeira – Ericeira", cat: "Casa de Banho", year: "2023", img: img(8134780, 700, 560) },
   ],
 
   contactosHero: img(7031412, 1600, 1100),

@@ -84,12 +84,6 @@ export default function Header() {
                       >
                         Área Construção Civil
                       </Link>
-                      <Link
-                        href="/servicos"
-                        className="block px-5 py-2.5 text-sm text-gold border-t border-white/10 mt-1 pt-2.5"
-                      >
-                        Ver todos os serviços
-                      </Link>
                     </div>
                   </div>
                 )}
@@ -131,16 +125,25 @@ export default function Header() {
       {mobileOpen && (
         <div className="lg:hidden absolute inset-x-0 top-20 h-[calc(100vh-5rem)] bg-ink-2 border-t border-white/10 px-6 py-4 overflow-y-auto">
           <nav className="flex flex-col gap-1 text-sm">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-2.5 text-white hover:text-gold border-b border-white/5"
-              >
-                {link.name.toUpperCase()}
-              </Link>
-            ))}
+            {navLinks.map((link) =>
+              link.name === "Serviços" ? (
+                <span
+                  key={link.href}
+                  className="py-2.5 text-white border-b border-white/5"
+                >
+                  {link.name.toUpperCase()}
+                </span>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setMobileOpen(false)}
+                  className="py-2.5 text-white hover:text-gold border-b border-white/5"
+                >
+                  {link.name.toUpperCase()}
+                </Link>
+              ),
+            )}
             <div className="pl-3 flex flex-col">
               {services.map((s) => (
                 <Link

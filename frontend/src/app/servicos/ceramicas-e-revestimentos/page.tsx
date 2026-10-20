@@ -11,7 +11,7 @@ export default function CeramicasPage() {
     <ServiceTemplate
       breadcrumbs={[
         { label: "Início", href: "/" },
-        { label: "Serviços", href: "/servicos" },
+        { label: "Serviços" },
         { label: "Cerâmicas e Revestimentos" },
       ]}
       title="Cerâmicas e Revestimentos"

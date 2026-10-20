@@ -14,7 +14,7 @@ export default function CarpintariaPage() {
     <ServiceTemplate
       breadcrumbs={[
         { label: "Início", href: "/" },
-        { label: "Serviços", href: "/servicos" },
+        { label: "Serviços" },
         { label: "Carpintaria" },
       ]}
       title="Carpintaria"

@@ -112,14 +112,8 @@ export default function HeroSlider() {
         </p>
         <div className="flex flex-wrap gap-4 mt-9">
           <Link
-            href="/projetos"
-            className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors"
-          >
-            VER PROJETOS <IconArrowRight />
-          </Link>
-          <Link
             href="/contactos"
-            className="inline-flex items-center gap-2 border border-white/40 text-white text-sm tracking-wide px-6 py-3.5 hover:border-gold hover:text-gold transition-colors"
+            className="inline-flex items-center gap-2 bg-gold text-ink text-sm tracking-wide px-6 py-3.5 hover:bg-gold-dark transition-colors"
           >
             PEDIR ORÇAMENTO
           </Link>

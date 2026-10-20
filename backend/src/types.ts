@@ -1,14 +1,3 @@
-export type Project = {
-  id: number;
-  title: string;
-  category: string;
-  location: string;
-  year: string;
-  image: string;
-};
-
-export type ProjectInput = Omit<Project, "id">;
-
 export type Contact = {
   id: number;
   name: string;

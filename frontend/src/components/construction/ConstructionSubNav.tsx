@@ -3,8 +3,6 @@ import Link from "next/link";
 const subNavLinks = [
   { label: "Serviços", href: "#servicos" },
   { label: "Materiais", href: "#materiais" },
-  { label: "Projetos", href: "#projetos" },
-  { label: "Processo", href: "#processo" },
   { label: "Contacto", href: "#contacto" },
 ];
 

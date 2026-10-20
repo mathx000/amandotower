@@ -1,7 +1,6 @@
 import Fastify from "fastify";
 import cors from "@fastify/cors";
 import "./db.js";
-import { projectRoutes } from "./routes/projects.js";
 import { contactRoutes } from "./routes/contacts.js";
 
 const app = Fastify({ logger: true });
@@ -12,7 +11,6 @@ await app.register(cors, {
 
 app.get("/api/health", async () => ({ status: "ok" }));
 
-await app.register(projectRoutes);
 await app.register(contactRoutes);
 
 const port = Number(process.env.PORT ?? 4000);

@@ -14,7 +14,7 @@ export default function PladurPage() {
     <ServiceTemplate
       breadcrumbs={[
         { label: "Início", href: "/" },
-        { label: "Serviços", href: "/servicos" },
+        { label: "Serviços" },
         { label: "Pladur" },
       ]}
       title="Pladur"
