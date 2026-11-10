@@ -5,6 +5,7 @@ export const services: NavLink[] = [
   { name: "Pladur", href: "/servicos/pladur" },
   { name: "Carpintaria", href: "/servicos/carpintaria" },
   { name: "Cerâmicas e Revestimentos", href: "/servicos/ceramicas-e-revestimentos" },
+  { name: "Jardinagem e Paisagismo", href: "/servicos/jardinagem-e-paisagismo" },
 ];
 
 export const navLinks: NavLink[] = [

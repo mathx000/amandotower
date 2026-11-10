@@ -68,6 +68,13 @@ const specialties = [
     href: "/servicos/ceramicas-e-revestimentos",
     img: images.homeCeramicas,
   },
+  {
+    icon: <IconHome />,
+    title: "Jardinagem e Paisagismo",
+    text: "Jardins cuidados e espaços exteriores desenhados à sua medida.",
+    href: "/servicos/jardinagem-e-paisagismo",
+    img: images.jardinagemHero,
+  },
 ];
 
 export default function HomePage() {
