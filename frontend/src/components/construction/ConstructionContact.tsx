@@ -75,7 +75,7 @@ export default function ConstructionContact() {
               </span>
               <div>
                 <p className="text-sm">Telefone</p>
-                <p className="text-sm text-stone">+351 912 345 678</p>
+                <p className="text-sm text-stone">+351 932 017 537</p>
               </div>
             </li>
             <li className="flex gap-3">
@@ -85,7 +85,7 @@ export default function ConstructionContact() {
               <div>
                 <p className="text-sm">Email</p>
                 <p className="text-sm text-stone">
-                  geral@amandotower-remodelacoes.pt
+                  amadotowerconstructions@gmail.com
                 </p>
               </div>
             </li>
@@ -104,7 +104,7 @@ export default function ConstructionContact() {
             </li>
           </ul>
           <a
-            href="https://wa.me/351912345678"
+            href="https://wa.me/351932017537"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-8 flex items-center gap-3 bg-ink text-white px-5 py-4 hover:bg-ink-2 transition-colors"
@@ -157,7 +157,7 @@ export default function ConstructionContact() {
                     required
                     name="phone"
                     type="tel"
-                    placeholder="Ex: 912 345 678"
+                    placeholder="Ex: 932 017 537"
                     className="w-full border border-black/10 bg-white px-4 py-2.5 text-sm focus:outline-none focus:border-gold"
                   />
                 </div>
