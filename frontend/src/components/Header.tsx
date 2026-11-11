@@ -14,10 +14,6 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
-
-  useEffect(() => {
     document.body.style.overflow = mobileOpen ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -30,7 +26,11 @@ export default function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-ink/95 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 flex items-center justify-between h-20">
-        <Link href="/" className="flex items-center gap-3">
+        <Link
+          href="/"
+          onClick={() => setMobileOpen(false)}
+          className="flex items-center gap-3"
+        >
           <Image
             src={logo}
             alt="Amado Tower"
